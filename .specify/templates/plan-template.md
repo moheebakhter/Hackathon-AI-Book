@@ -31,7 +31,10 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+*   **Accurate and Verifiable Technical Content**: All claims must be based on trusted documentation.
+*   **Clear and Beginner-Friendly Explanations**: Writing must be simple, structured, and plagiarism-free.
+*   **Practical, Real-World Examples**: All code must be tested and error-free.
+*   **AI-Assisted but Human-Verified Writing**: No hallucinated tools or commands.
 
 ## Project Structure
 
