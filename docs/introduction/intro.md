@@ -1,0 +1,9 @@
+# Introduction to Physical AI & Humanoid Robotics
+
+Welcome to the forefront of artificial intelligence and robotics – the captivating realm of Physical AI and Humanoid Robotics. This book serves as your comprehensive guide to understanding, designing, simulating, and deploying intelligent humanoid robots capable of interacting with the physical world.
+
+In an era where AI is rapidly transforming every industry, the integration of artificial intelligence with physical embodiment marks a pivotal shift. It moves AI from abstract computational spaces into tangible reality, enabling machines to perceive, reason, and act in complex, unstructured environments alongside humans. Humanoid robots, with their human-like form and capabilities, represent the pinnacle of this integration, offering unparalleled potential for service, exploration, and collaboration.
+
+This book is meticulously crafted for AI students, robotics developers, and engineers who are eager to build real-world Physical AI systems. We will navigate through the foundational concepts and cutting-edge technologies that empower autonomous humanoids. From the intricate "nervous system" provided by ROS 2, through the creation of realistic digital twins in Gazebo and Unity, to the advanced "brain" functions powered by NVIDIA Isaac, and finally to the revolutionary Vision-Language-Action (VLA) systems that enable natural interaction, you will gain the knowledge and practical skills necessary to contribute to this transformative field.
+
+Prepare to embark on a learning journey that bridges theory with practice, equipping you to design intelligent agents that don't just think, but *do*.
