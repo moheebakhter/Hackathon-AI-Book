@@ -1,0 +1,18 @@
+.docItemContainer :global(header) {
+    text-align: center;
+}
+
+.docItemContainer :global(h1) {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(45deg, var(--ifm-color-primary), var(--ifm-color-primary-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem;
+}
+
+[data-theme='dark'] .docItemContainer :global(h1) {
+    background: linear-gradient(45deg, var(--ifm-color-primary-light), var(--ifm-color-primary-lighter));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

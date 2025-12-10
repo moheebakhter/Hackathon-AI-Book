@@ -1,30 +1,150 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
-:root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+/* ==========================================================================
+   Navbar Customization
+   ========================================================================== */
+.navbar {
+  padding-left: 1.5rem; /* Ensure left section is not stuck to the edge */
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+:global(.navbar__brand img) {
+    height: 60px !important; /* Force a larger height */
+    max-height: 60px !important;
+    width: auto !important;
+    margin-right: 1rem; /* Spacing between logo and next item */
+}
+
+/* Adjust spacing for the site title next to the logo */
+.navbar__title {
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/**
+ * Any CSS placed here will be applied to the whole site,
+ * affecting both the homepage and docs pages.
+ *
+ * For styles specific to docs pages, use selectors that
+ * target elements within the documentation layout.
+ */
+
+/* ==========================================================================
+   Docs Page - Main Content Container
+   ========================================================================== */
+
+/* Apply styles only to docs pages, not the homepage */
+.docs-wrapper .docMainContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-Main-styles-module {
+    background-color: transparent; /* Remove default background */
+}
+
+.docs-wrapper .docItemCol_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module {
+    max-width: 960px; /* Set a max-width for readability */
+    margin: 0 auto;
+    width: 100%;
+}
+
+.docItemContainer_src-theme-DocItem-styles-module {
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.6); /* Light theme glassmorphism */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px 0 rgba(100, 100, 100, 0.1);
+    margin-top: 2rem;
+}
+
+[data-theme='dark'] .docItemContainer_src-theme-DocItem-styles-module {
+    background: rgba(30, 30, 30, 0.6); /* Dark theme glassmorphism */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================================================
+   Docs Page - Typography and Readability
+   ========================================================================== */
+
+.docs-wrapper .markdown {
+    line-height: 1.7;
+}
+
+.docs-wrapper .markdown p,
+.docs-wrapper .markdown ul,
+.docs-wrapper .markdown ol {
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+}
+
+.docs-wrapper .markdown h2 {
+    font-size: 2.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--ifm-color-emphasis-300);
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.docs-wrapper .markdown h3 {
+    font-size: 1.75rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   Sidebar Styling
+   ========================================================================== */
+
+.menu__link {
+    transition: background-color 0.2s ease, color 0.2s ease;
+    border-radius: 6px;
+    margin: 2px 0;
+}
+
+.menu__link:hover,
+.menu__link--active {
+    background-color: var(--ifm-color-primary-lightest);
+    color: var(--ifm-color-primary-dark);
+}
+
+.menu__link--active {
+    font-weight: 600;
+}
+
+[data-theme='dark'] .menu__link:hover,
+[data-theme='dark'] .menu__link--active {
+    background-color: rgba(var(--ifm-color-primary-rgb), 0.1);
+    color: var(--ifm-color-primary-light);
+}
+
+/* ==========================================================================
+   Breadcrumbs Styling
+   ========================================================================== */
+
+.breadcrumbs {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 1rem 0 0;
+    display: inline-block;
+}
+
+[data-theme='dark'] .breadcrumbs {
+    background-color: rgba(30, 30, 30, 0.4);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.breadcrumbs__link {
+    color: var(--ifm-font-color-secondary);
+    transition: color 0.2s ease;
+}
+
+.breadcrumbs__link:hover {
+    color: var(--ifm-color-primary);
+    text-decoration: none;
+}
+
+.breadcrumbs__item--active .breadcrumbs__link {
+    color: var(--ifm-font-color-base);
+    font-weight: 600;
 }

@@ -1,23 +1,255 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
+/* ==========================================================================
+   Global & Navbar
+   ========================================================================== */
+:global(.navbar__logo img) {
+  height: 32px;
+  width: auto;
+  transition: transform 0.2s ease-in-out;
+}
 
+:global(.navbar__logo img:hover) {
+  transform: scale(1.05);
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
 .heroBanner {
-  padding: 4rem 0;
+  padding: 8rem 0 10rem;
   text-align: center;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(45deg, #5a78f0, #8d70e6);
+  color: white;
 }
 
+.heroTitle {
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  max-width: 800px;
+  margin: 2rem auto 2.5rem;
+  opacity: 0.9;
+}
+
+.buttons .button {
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.buttons .button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================================================
+   Main Content & Sections
+   ========================================================================== */
+.mainContent {
+  background-color: #fcfcff;
+}
+
+[data-theme='dark'] .mainContent {
+  background-color: #0c0c10;
+}
+
+.section {
+  padding: 6rem 0;
+}
+
+.sectionAlt {
+  background-color: #ffffff;
+}
+
+[data-theme='dark'] .sectionAlt {
+  background-color: #111115;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.sectionSubtitle {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4rem;
+  color: var(--ifm-color-secondary-darkest);
+}
+
+[data-theme='dark'] .sectionSubtitle {
+    color: var(--ifm-color-secondary-dark);
+}
+
+/* ==========================================================================
+   Value Props Section
+   ========================================================================== */
+.valueProp {
+  margin-bottom: 2rem;
+}
+
+.valuePropCard {
+  text-align: center;
+  background-color: white;
+  border: 1px solid #e9e9f2;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+[data-theme='dark'] .valuePropCard {
+  background-color: #16161c;
+  border-color: #2a2a38;
+}
+
+.valuePropCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.valuePropIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  padding: 0.8rem;
+  border-radius: 50%;
+  background: linear-gradient(45deg, rgba(90, 120, 240, 0.1), rgba(141, 112, 230, 0.1));
+}
+
+.valuePropTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+/* ==========================================================================
+   Module Overview Section
+   ========================================================================== */
+.moduleGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.moduleLink {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+.moduleLink:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.moduleCard {
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background-color: #f8f8fd;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+[data-theme='dark'] .moduleCard {
+  background-color: #1a1a21;
+}
+
+.moduleLink:hover .moduleCard {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border-color: var(--ifm-color-primary-light);
+}
+
+.moduleTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  background: linear-gradient(45deg, var(--ifm-color-primary), var(--ifm-color-primary-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+[data-theme='dark'] .moduleTitle {
+    background: linear-gradient(45deg, var(--ifm-color-primary-light), var(--ifm-color-primary-lighter));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.moduleDescription {
+    margin-bottom: 0;
+    color: var(--ifm-font-color-secondary);
+}
+
+/* ==========================================================================
+   Stats Section
+   ========================================================================== */
+.statsContainer {
+  justify-content: center;
+  gap: 4rem;
+  text-align: center;
+}
+
+.statItem {
+  padding: 0 1.5rem;
+}
+
+.statNumber {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1;
+  background: linear-gradient(45deg, #5a78f0, #8d70e6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--ifm-font-color-secondary);
+}
+
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
 @media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
+  .heroTitle {
+    font-size: 3.5rem;
+  }
+  .heroSubtitle {
+    font-size: 1.25rem;
+  }
+  .section {
+    padding: 4rem 0;
+  }
+  .valueProp {
+    margin-bottom: 1.5rem;
   }
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media screen and (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.8rem;
+  }
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+  .moduleGrid {
+    grid-template-columns: 1fr;
+  }
+  .statsContainer {
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
