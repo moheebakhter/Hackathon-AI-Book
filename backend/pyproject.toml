@@ -1,0 +1,22 @@
+[project]
+name = "rag-chatbot-backend"
+version = "0.1.0"
+description = "Backend service for the RAG Chatbot."
+authors = [{ name = "Gemini Agent" }]
+requires-python = ">=3.9"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic",
+    "python-dotenv",
+    "openai",
+    "qdrant-client",
+    "asyncpg",
+    "pydantic-settings"
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest",
+    "httpx"
+]
